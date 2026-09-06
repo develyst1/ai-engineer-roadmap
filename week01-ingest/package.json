@@ -1,0 +1,22 @@
+{
+  "name": "week01-ingest",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "schema": "psql \"$DATABASE_URL\" -f schema.sql",
+    "ingest": "tsx src/ingest.ts",
+    "check": "tsx src/check.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "gpt-tokenizer": "^2.9.0",
+    "pdfjs-dist": "^4.10.38",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
